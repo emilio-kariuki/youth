@@ -13,6 +13,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  TabController? _tabController;
   final email = TextEditingController();
   final password = TextEditingController();
   @override
@@ -68,6 +69,7 @@ class LoginContents extends StatefulWidget {
 }
 
 class _LoginContentsState extends State<LoginContents> {
+  TabController ?_tabController;
   final email = TextEditingController();
   final password = TextEditingController();
 
@@ -104,6 +106,7 @@ class _LoginContentsState extends State<LoginContents> {
                 elevation: 0,
                 backgroundColor: Colors.transparent,
                 bottom: TabBar(
+                  controller: _tabController,
                   indicatorWeight: 5,
                   indicatorPadding: const EdgeInsets.all(5),
                   labelPadding: const EdgeInsets.all(2),
