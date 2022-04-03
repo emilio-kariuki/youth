@@ -131,7 +131,7 @@ class _LoginContentsState extends State<LoginContents>
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
                                 // ignore: prefer_const_constructors
-                                color: index == 1
+                                color: index == 0
                                     ? Color.fromARGB(255, 255, 255, 255)
                                     : Color.fromARGB(255, 206, 99, 0),
                                 fontWeight: FontWeight.w500))),
