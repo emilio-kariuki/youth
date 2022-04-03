@@ -153,35 +153,7 @@ class _LoginContentsState extends State<LoginContents> {
                               height:
                                   MediaQuery.of(context).size.height * 0.05),
                           
-                          SizedBox(
-                            height: size.height * 0.06,
-                            width: size.width * 0.7,
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color.fromARGB(255, 206, 99, 0)),
-                                shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                    side: BorderSide(
-                                      color: Color.fromARGB(255, 206, 99, 0),
-                                      width: 2.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              child: Text('Login',
-                                  style: GoogleFonts.roboto(fontSize: 20)),
-                              onPressed: () {
-                                setState(() {
-                                  Navigator.of(context).pushReplacement(
-                                      MaterialPageRoute(
-                                          builder: (context) => Login()));
-                                });
-                              },
-                            ),
-                          ),
+                          ActionButton(size, context,"Login"),
                         ],
                       ),
                     ),
@@ -194,6 +166,38 @@ class _LoginContentsState extends State<LoginContents> {
         ),
       ],
     );
+  }
+
+  SizedBox ActionButton(Size size, BuildContext context, String action) {
+    return SizedBox(
+                          height: size.height * 0.06,
+                          width: size.width * 0.7,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                  Color.fromARGB(255, 206, 99, 0)),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                  side: BorderSide(
+                                    color: Color.fromARGB(255, 206, 99, 0),
+                                    width: 2.0,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            child: Text(action,
+                                style: GoogleFonts.roboto(fontSize: 20)),
+                            onPressed: () {
+                              setState(() {
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                        builder: (context) => Login()));
+                              });
+                            },
+                          ),
+                        );
   }
 
   TextFormField Form(
