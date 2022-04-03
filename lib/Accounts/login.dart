@@ -149,8 +149,20 @@ class _LoginContentsState extends State<LoginContents>
                   color: Color.fromARGB(255, 255, 255, 255),
                   child: TabBarView(
                     children: [
-                      TabContainer(size, context, "Login"),
-                      TabContainer(size, context, "Sign Up"),
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+          
+                          });
+                        },
+                        child: TabContainer(size, context, "Login")),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            
+                          });
+                        },
+                        child: TabContainer(size, context, "Sign Up")),
                     ],
                   ),
                 ),
