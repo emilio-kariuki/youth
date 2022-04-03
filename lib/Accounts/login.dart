@@ -94,13 +94,13 @@ class _LoginContentsState extends State<LoginContents> {
                   // ignore: prefer_const_literals_to_create_immutables
                   tabs: [
                     Tab(
-                        child: Text("Plastic",
+                        child: Text("Log In",
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
                                 color: const Color.fromARGB(255, 206, 99, 0),
                                 fontWeight: FontWeight.w500))),
                     Tab(
-                        child: Text("Metal",
+                        child: Text("Sign Up",
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
                                 // ignore: prefer_const_constructors
@@ -128,7 +128,7 @@ class _LoginContentsState extends State<LoginContents> {
                           ),
                           SizedBox(
                               height:
-                                  MediaQuery.of(context).size.height * 0.035),
+                                  MediaQuery.of(context).size.height * 0.03),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
                             child: SizedBox(
