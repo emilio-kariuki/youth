@@ -133,7 +133,7 @@ class _LoginContentsState extends State<LoginContents> {
                           ),
                           SizedBox(
                               height:
-                                  MediaQuery.of(context).size.height * 0.03),
+                                  MediaQuery.of(context).size.height * 0.02),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
                             child: SizedBox(
