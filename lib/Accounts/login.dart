@@ -122,7 +122,7 @@ class _LoginContentsState extends State<LoginContents> {
                             padding: const EdgeInsets.fromLTRB(10, 1, 10, 0),
                             child: SizedBox(
                               height: size.height * 0.06,
-                              child: Form("Enter Email or username", email),
+                              child: Form("Enter Email or username", email,false),
                             ),
                           ),
                           SizedBox(height: 5),
@@ -130,7 +130,7 @@ class _LoginContentsState extends State<LoginContents> {
                             padding: const EdgeInsets.fromLTRB(10, 1, 10, 0),
                             child: SizedBox(
                               height: size.height * 0.06,
-                              child: Form("Enter Password", password),
+                              child: Form("Enter Password", password,true),
                             ),
                           ),
                           SizedBox(height: 10),
@@ -177,10 +177,14 @@ class _LoginContentsState extends State<LoginContents> {
     );
   }
 
-  TextFormField Form(String name, TextEditingController action) {
+  TextFormField Form(String name, TextEditingController action, bool isObscured) {
     return TextFormField(
-      obscureText: false,
+      validator: (String? value) {
+    return (value != null ) ? 'Enter a value!!' : null;
+  },
+      obscureText: isObscured,
       decoration: InputDecoration(
+        
           filled: true,
           hintStyle: TextStyle(
               color: Color.fromARGB(255, 180, 180, 180),
