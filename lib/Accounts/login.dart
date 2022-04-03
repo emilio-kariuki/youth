@@ -130,7 +130,8 @@ class _LoginContentsState extends State<LoginContents> {
                                     ),
                                     // icon: Icon(Icons.mail,size:30,color: Colors.black),
                                     filled: true,
-                                    hintStyle: TextStyle(color: Colors.grey[800]),
+                                    hintStyle:
+                                        TextStyle(color: Colors.grey[800]),
                                     hoverColor: Colors.red,
                                     hintText: "Email",
                                     prefixIcon: Icon(Icons.mail,
@@ -153,7 +154,8 @@ class _LoginContentsState extends State<LoginContents> {
                                     ),
                                     // icon: Icon(Icons.mail,size:30,color: Colors.black),
                                     filled: true,
-                                    hintStyle: TextStyle(color: Colors.grey[800]),
+                                    hintStyle:
+                                        TextStyle(color: Colors.grey[800]),
                                     hoverColor: Colors.red,
                                     hintText: "password",
                                     prefixIcon: Icon(Icons.lock,
@@ -164,6 +166,36 @@ class _LoginContentsState extends State<LoginContents> {
                             ),
                           ),
                           SizedBox(height: 10),
+                          SizedBox(
+                            height: size.height * 0.06,
+                            width: size.width * 0.7,
+                            child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Color.fromARGB(255, 4, 49, 5)),
+                                // MaterialStateProperty<Color?>?
+                                shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30.0),
+                                    side: BorderSide(
+                                      color: Color.fromARGB(255, 4, 49, 5),
+                                      width: 2.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              child: Text('Login',
+                                  style: GoogleFonts.roboto(fontSize: 20)),
+                              onPressed: () {
+                                setState(() {
+                                  Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                          builder: (context) => Login()));
+                                });
+                              },
+                            ),
+                          ),
                         ],
                       ),
                     ),
