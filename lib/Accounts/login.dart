@@ -120,14 +120,18 @@ class _LoginContentsState extends State<LoginContents> {
                         child: Text("Log In",
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
-                                color: Color.fromARGB(255, 255, 255, 255),
+                                color:  _tabController?.index == 0
+                          ? Color.fromARGB(255, 255, 255, 255)
+                          : Color.fromARGB(255, 206, 99, 0),
                                 fontWeight: FontWeight.w500))),
                     Tab(
                         child: Text("Sign Up",
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
                                 // ignore: prefer_const_constructors
-                                color: Color.fromARGB(255, 255, 255, 255),
+                                color: _tabController?.index == 1
+                          ? Color.fromARGB(255, 255, 255, 255)
+                          : Color.fromARGB(255, 206, 99, 0),
                                 fontWeight: FontWeight.w500))),
                   ],
                 ),
