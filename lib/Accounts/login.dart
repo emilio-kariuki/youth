@@ -125,13 +125,7 @@ class _LoginContentsState extends State<LoginContents> {
                               child: TextFormField(
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                    // border: OutlineInputBorder(
-                                    //   borderSide: BorderSide(
-                                    //     color: Colors.white,
-                                    //   ),
-                                    //   borderRadius: BorderRadius.circular(30.0),
-                                    // ),
-                                    // icon: Icon(Icons.mail,size:30,color: Colors.black),
+                                    
                                     filled: true,
                                     hintStyle:
                                         TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 15, fontWeight: FontWeight.w400),
@@ -152,17 +146,13 @@ class _LoginContentsState extends State<LoginContents> {
                               child: TextFormField(
                                 obscureText: true,
                                 decoration: InputDecoration(
-                                    // border: OutlineInputBorder(
-                                    //   borderRadius: BorderRadius.circular(30.0),
-                                    // ),
-                                    // icon: Icon(Icons.mail,size:30,color: Colors.black),
+                                    
                                     filled: true,
                                     hintStyle:
                                         TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 15, fontWeight: FontWeight.w400),
                                     
                                     hintText: "password",
-                                    // prefixIcon: Icon(Icons.lock,
-                                    //     color: Colors.blueGrey[900]),
+                                    
                                     fillColor: Colors.grey[200]),
                                 controller: password,
                               ),
@@ -176,7 +166,7 @@ class _LoginContentsState extends State<LoginContents> {
                               style: ButtonStyle(
                                 backgroundColor:
                                     MaterialStateProperty.all(Color.fromARGB(255, 4, 49, 5)),
-                                // MaterialStateProperty<Color?>?
+                                
                                 shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
