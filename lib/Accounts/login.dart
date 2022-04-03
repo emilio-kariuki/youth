@@ -79,7 +79,7 @@ class _LoginContentsState extends State<LoginContents> {
             child: Scaffold(
               backgroundColor: Colors.transparent,
               appBar: AppBar(
-                title: Text("Welcome",style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500)),
+                title: Center(child: Text("Welcome",style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500,color: Color.fromARGB(255, 206, 99, 0),),)),
                 flexibleSpace: Container(
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
