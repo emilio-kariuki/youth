@@ -89,7 +89,7 @@ class _LoginContentsState extends State<LoginContents> {
                 bottom: TabBar(
                   indicatorWeight: 5,
                   indicatorPadding: const EdgeInsets.all(5),
-                  labelPadding : const EdgeInsets.all(2),
+                  labelPadding: const EdgeInsets.all(2),
                   indicator: BoxDecoration(
                       color: const Color.fromARGB(255, 206, 99, 0),
                       borderRadius: BorderRadius.circular(15.0)),
@@ -145,15 +145,19 @@ class _LoginContentsState extends State<LoginContents> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text("Forgot password ?", style: GoogleFonts.redressed(fontSize:15, color: Colors.grey,fontWeight: FontWeight.w400)),
+                                Text("Forgot password ?",
+                                    style: GoogleFonts.redressed(
+                                        fontSize: 15,
+                                        color: Colors.grey,
+                                        fontWeight: FontWeight.w400)),
                               ],
                             ),
                           ),
                           SizedBox(
                               height:
                                   MediaQuery.of(context).size.height * 0.05),
-                          
-                          ActionButton(size, context,"Login"),
+                          ActionButton(size, context, "Login"),
+                          OrDivider(),
                         ],
                       ),
                     ),
@@ -168,36 +172,56 @@ class _LoginContentsState extends State<LoginContents> {
     );
   }
 
+  Row OrDivider() {
+    return Row(children: [
+      Expanded(
+        // ignore: unnecessary_new
+        child: Container(
+            margin: const EdgeInsets.only(left: 10.0, right: 30.0),
+            child: Divider(
+              color: Color.fromARGB(255, 133, 133, 133),
+              height: 90,
+            )),
+      ),
+      Text("OR"),
+      Expanded(
+        child: Container(
+            margin: const EdgeInsets.only(left: 30.0, right: 10.0),
+            child: Divider(
+              color: Color.fromARGB(255, 133, 133, 133),
+              height: 50,
+            )),
+      ),
+    ]);
+  }
+
   SizedBox ActionButton(Size size, BuildContext context, String action) {
     return SizedBox(
-                          height: size.height * 0.06,
-                          width: size.width * 0.7,
-                          child: ElevatedButton(
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                  Color.fromARGB(255, 206, 99, 0)),
-                              shape: MaterialStateProperty.all<
-                                  RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0),
-                                  side: BorderSide(
-                                    color: Color.fromARGB(255, 206, 99, 0),
-                                    width: 2.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            child: Text(action,
-                                style: GoogleFonts.roboto(fontSize: 20)),
-                            onPressed: () {
-                              setState(() {
-                                Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(
-                                        builder: (context) => Login()));
-                              });
-                            },
-                          ),
-                        );
+      height: size.height * 0.06,
+      width: size.width * 0.7,
+      child: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor:
+              MaterialStateProperty.all(Color.fromARGB(255, 206, 99, 0)),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+              side: BorderSide(
+                color: Color.fromARGB(255, 206, 99, 0),
+                width: 2.0,
+              ),
+            ),
+          ),
+        ),
+        child: Text(action, style: GoogleFonts.roboto(fontSize: 20)),
+        onPressed: () {
+          setState(() {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => Login()));
+          });
+        },
+      ),
+    );
   }
 
   TextFormField Form(
@@ -209,7 +233,6 @@ class _LoginContentsState extends State<LoginContents> {
       },
       obscureText: isObscured,
       decoration: InputDecoration(
-        
           filled: true,
           hintStyle: TextStyle(
               color: Color.fromARGB(255, 180, 180, 180),
