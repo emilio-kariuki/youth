@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
               height: size.height * 0.4,
               width: size.width,
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 41, 5, 18),
+                color: Color.fromARGB(255, 206, 99, 0),
                 shape: BoxShape.rectangle,
               )),
         ),
@@ -172,8 +172,8 @@ class _LoginContentsState extends State<LoginContents> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text("Forgot password ?",
-                    style: GoogleFonts.redressed(
-                        fontSize: 15,
+                    style: GoogleFonts.roboto(
+                        fontSize: 12,
                         color: Colors.grey,
                         fontWeight: FontWeight.w400)),
               ],
