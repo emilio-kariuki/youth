@@ -103,7 +103,7 @@ class _LoginContentsState extends State<LoginContents> {
                   labelPadding: const EdgeInsets.all(2),
                   indicator: BoxDecoration(
                       color: const Color.fromARGB(255, 206, 99, 0),
-                      borderRadius: BorderRadius.circular(15.0)),
+                      borderRadius: BorderRadius.circular(20.0)),
 
                   // ignore: prefer_const_literals_to_create_immutables
                   tabs: [
