@@ -3,6 +3,8 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 
+import '../Builder/social.dart';
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -155,9 +157,10 @@ class _LoginContentsState extends State<LoginContents> {
                           ),
                           SizedBox(
                               height:
-                                  MediaQuery.of(context).size.height * 0.05),
+                                  MediaQuery.of(context).size.height * 0.03),
                           ActionButton(size, context, "Login"),
                           OrDivider(),
+                          SocialIcons()
                         ],
                       ),
                     ),
@@ -170,6 +173,23 @@ class _LoginContentsState extends State<LoginContents> {
         ),
       ],
     );
+  }
+
+  Row SocialIcons() {
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      SocalIcon(
+        iconSrc: "assets/images/facebook.svg",
+        press: () {},
+      ),
+      SocalIcon(
+        iconSrc: "assets/images/twitter.svg",
+        press: () {},
+      ),
+      SocalIcon(
+        iconSrc: "assets/images/google.svg",
+        press: () {},
+      ),
+    ]);
   }
 
   Row OrDivider() {
