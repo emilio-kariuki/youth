@@ -134,9 +134,9 @@ class _LoginContentsState extends State<LoginContents> {
                                     // icon: Icon(Icons.mail,size:30,color: Colors.black),
                                     filled: true,
                                     hintStyle:
-                                        TextStyle(color: Colors.grey[800]),
-                                    hoverColor: Colors.red,
-                                    hintText: "Email",
+                                        TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 15, fontWeight: FontWeight.w400),
+                                    
+                                    hintText: "Enter email or username",
                                     // prefixIcon: Icon(Icons.mail,
                                         // color: Colors.blueGrey[900]),
                                     fillColor: Colors.grey[200]),
@@ -158,8 +158,8 @@ class _LoginContentsState extends State<LoginContents> {
                                     // icon: Icon(Icons.mail,size:30,color: Colors.black),
                                     filled: true,
                                     hintStyle:
-                                        TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 20, fontWeight: FontWeight.w400),
-                                    hoverColor: Colors.red,
+                                        TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 15, fontWeight: FontWeight.w400),
+                                    
                                     hintText: "password",
                                     // prefixIcon: Icon(Icons.lock,
                                     //     color: Colors.blueGrey[900]),
