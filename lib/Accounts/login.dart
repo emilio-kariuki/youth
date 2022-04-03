@@ -126,16 +126,21 @@ class _LoginContentsState extends State<LoginContents> {
                             ),
                           ),
                           SizedBox(height: 5),
-                          Form("Enter password", password),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(10, 1, 10, 0),
+                            child: SizedBox(
+                              height: size.height * 0.06,
+                              child: Form("Enter Password", password),
+                            ),
+                          ),
                           SizedBox(height: 10),
                           SizedBox(
                             height: size.height * 0.06,
                             width: size.width * 0.7,
                             child: ElevatedButton(
                               style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Color.fromARGB(255, 4, 49, 5)),
-                                
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(255, 4, 49, 5)),
                                 shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
@@ -174,18 +179,18 @@ class _LoginContentsState extends State<LoginContents> {
 
   TextFormField Form(String name, TextEditingController action) {
     return TextFormField(
-                              obscureText: false,
-                              decoration: InputDecoration(
-                                  
-                                  filled: true,
-                                  hintStyle:
-                                      TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 15, fontWeight: FontWeight.w400),
-                                  
-                                  hintText: name,
-                                
-                                  fillColor: Colors.grey[200]),
-                              controller: action,
-                            );
+      obscureText: false,
+      decoration: InputDecoration(
+          filled: true,
+          hintStyle: TextStyle(
+              color: Color.fromARGB(255, 180, 180, 180),
+              fontSize: 15,
+              fontWeight: FontWeight.w400),
+          hintText: name,
+          focusColor: Color.fromARGB(255, 150, 93, 7),
+          fillColor: Colors.grey[200]),
+      controller: action,
+    );
   }
 
   FlatButton button(String name) {
