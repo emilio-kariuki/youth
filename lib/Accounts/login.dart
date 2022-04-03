@@ -37,14 +37,20 @@ class _LoginState extends State<Login> {
             alignment: Alignment.center,
             child: Padding(
               padding: const EdgeInsets.all(2.0),
-              child: Container(
-                height: size.height * 0.6,
-                width: size.width * 0.8,
-                decoration: BoxDecoration(
+              child: Material(
+                elevation: 2,
+                shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
-                  color: const Color.fromARGB(255, 63, 41, 41),
                 ),
-                child: const LoginContents(),
+                child: Container(
+                  height: size.height * 0.57,
+                  width: size.width * 0.8,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  ),
+                  child: const LoginContents(),
+                ),
               ),
             ),
           ),
@@ -72,7 +78,7 @@ class _LoginContentsState extends State<LoginContents> {
       children: [
         // SizedBox(height: size.height * 0.1),
         Container(
-          height: size.height * 0.6,
+          height: size.height * 0.57,
           width: size.width * 0.8,
           child: DefaultTabController(
             length: 2,
@@ -149,7 +155,7 @@ class _LoginContentsState extends State<LoginContents> {
     return Container(
       child: Column(
         children: [
-          SizedBox(height: size.height * 0.03),
+          SizedBox(height: size.height * 0.01),
           Padding(
             padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
             child: SizedBox(
