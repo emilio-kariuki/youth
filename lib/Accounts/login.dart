@@ -192,7 +192,7 @@ class _LoginContentsState extends State<LoginContents> {
               fontWeight: FontWeight.w400),
           hintText: name,
           focusColor: Color.fromARGB(255, 150, 93, 7),
-          fillColor: Colors.grey[200]),
+          fillColor: Color.fromARGB(255, 255, 255, 255)),
       controller: action,
     );
   }
