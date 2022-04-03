@@ -89,7 +89,7 @@ class _LoginContentsState extends State<LoginContents> {
                 bottom: TabBar(
                   indicator: BoxDecoration(
                       color: const Color.fromARGB(255, 230, 185, 40),
-                      borderRadius: BorderRadius.circular(25.0)),
+                      borderRadius: BorderRadius.circular(15.0)),
 
                   // ignore: prefer_const_literals_to_create_immutables
                   tabs: [
@@ -111,7 +111,7 @@ class _LoginContentsState extends State<LoginContents> {
               ),
               body: Container(
                 height: size.height * 0.5,
-                color: Colors.blue,
+                color: Color.fromARGB(255, 255, 255, 255),
                 child: TabBarView(
                   children: [
                     Container(
