@@ -79,7 +79,15 @@ class _LoginContentsState extends State<LoginContents> {
             child: Scaffold(
               backgroundColor: Colors.transparent,
               appBar: AppBar(
-                title: Center(child: Text("Welcome",style: GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.w500,color: Color.fromARGB(255, 206, 99, 0),),)),
+                title: Center(
+                    child: Text(
+                  "Welcome",
+                  style: GoogleFonts.roboto(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromARGB(255, 206, 99, 0),
+                  ),
+                )),
                 flexibleSpace: Container(
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
@@ -115,14 +123,19 @@ class _LoginContentsState extends State<LoginContents> {
                   ],
                 ),
               ),
-              body: Container(
-                height: size.height * 0.5,
-                color: Color.fromARGB(255, 255, 255, 255),
-                child: TabBarView(
-                  children: [
-                    TabContainer(size, context,"Login"),
-                    TabContainer(size, context,"Sign Up"),
-                  ],
+              body: ClipRRect(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
+                child: Container(
+                  height: size.height * 0.5,
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  child: TabBarView(
+                    children: [
+                      TabContainer(size, context, "Login"),
+                      TabContainer(size, context, "Sign Up"),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -134,50 +147,45 @@ class _LoginContentsState extends State<LoginContents> {
 
   Container TabContainer(Size size, BuildContext context, String action) {
     return Container(
-                    child: Column(
-                      children: [
-                        SizedBox(height: size.height * 0.03),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
-                          child: SizedBox(
-                            height: size.height * 0.06,
-                            child:
-                                Form("Enter Email or username", email, false),
-                          ),
-                        ),
-                        SizedBox(
-                            height:
-                                MediaQuery.of(context).size.height * 0.02),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
-                          child: SizedBox(
-                            height: size.height * 0.06,
-                            child: Form("Enter Password", password, true),
-                          ),
-                        ),
-                        SizedBox(height: 8),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 15),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Text("Forgot password ?",
-                                  style: GoogleFonts.redressed(
-                                      fontSize: 15,
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.w400)),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                            height:
-                                MediaQuery.of(context).size.height * 0.03),
-                        ActionButton(size, context, action),
-                        OrDivider(),
-                        SocialIcons()
-                      ],
-                    ),
-                  );
+      child: Column(
+        children: [
+          SizedBox(height: size.height * 0.03),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
+            child: SizedBox(
+              height: size.height * 0.06,
+              child: Form("Enter Email or username", email, false),
+            ),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
+            child: SizedBox(
+              height: size.height * 0.06,
+              child: Form("Enter Password", password, true),
+            ),
+          ),
+          SizedBox(height: 8),
+          Padding(
+            padding: const EdgeInsets.only(right: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text("Forgot password ?",
+                    style: GoogleFonts.redressed(
+                        fontSize: 15,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.w400)),
+              ],
+            ),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+          ActionButton(size, context, action),
+          OrDivider(),
+          SocialIcons()
+        ],
+      ),
+    );
   }
 
   Row SocialIcons() {
