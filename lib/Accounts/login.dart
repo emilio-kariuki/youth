@@ -69,7 +69,7 @@ class LoginContents extends StatefulWidget {
 }
 
 class _LoginContentsState extends State<LoginContents> {
-  TabController ?_tabController;
+  TabController? _tabController;
   final email = TextEditingController();
   final password = TextEditingController();
 
@@ -120,9 +120,9 @@ class _LoginContentsState extends State<LoginContents> {
                         child: Text("Log In",
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
-                                color:  _tabController?.index == 0
-                          ? Color.fromARGB(255, 255, 255, 255)
-                          : Color.fromARGB(255, 206, 99, 0),
+                                color: _tabController?.index == 0
+                                    ? Color.fromARGB(255, 255, 255, 255)
+                                    : Color.fromARGB(255, 206, 99, 0),
                                 fontWeight: FontWeight.w500))),
                     Tab(
                         child: Text("Sign Up",
@@ -130,8 +130,8 @@ class _LoginContentsState extends State<LoginContents> {
                                 fontSize: 18,
                                 // ignore: prefer_const_constructors
                                 color: _tabController?.index == 1
-                          ? Color.fromARGB(255, 255, 255, 255)
-                          : Color.fromARGB(255, 206, 99, 0),
+                                    ? Color.fromARGB(255, 255, 255, 255)
+                                    : Color.fromARGB(255, 206, 99, 0),
                                 fontWeight: FontWeight.w500))),
                   ],
                 ),
