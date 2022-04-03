@@ -185,11 +185,13 @@ class _LoginContentsState extends State<LoginContents> {
   TextFormField Form(
       String name, TextEditingController action, bool isObscured) {
     return TextFormField(
+      cursorWidth: 1,
       validator: (String? value) {
         return (value != null) ? 'Enter a value!!' : null;
       },
       obscureText: isObscured,
       decoration: InputDecoration(
+        
           filled: true,
           hintStyle: TextStyle(
               color: Color.fromARGB(255, 180, 180, 180),
