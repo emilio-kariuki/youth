@@ -119,52 +119,8 @@ class _LoginContentsState extends State<LoginContents> {
                 color: Color.fromARGB(255, 255, 255, 255),
                 child: TabBarView(
                   children: [
-                    Container(
-                      child: Column(
-                        children: [
-                          SizedBox(height: size.height * 0.03),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
-                            child: SizedBox(
-                              height: size.height * 0.06,
-                              child:
-                                  Form("Enter Email or username", email, false),
-                            ),
-                          ),
-                          SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height * 0.02),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
-                            child: SizedBox(
-                              height: size.height * 0.06,
-                              child: Form("Enter Password", password, true),
-                            ),
-                          ),
-                          SizedBox(height: 8),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 15),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Text("Forgot password ?",
-                                    style: GoogleFonts.redressed(
-                                        fontSize: 15,
-                                        color: Colors.grey,
-                                        fontWeight: FontWeight.w400)),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height * 0.03),
-                          ActionButton(size, context, "Login"),
-                          OrDivider(),
-                          SocialIcons()
-                        ],
-                      ),
-                    ),
-                    Container()
+                    TabContainer(size, context,"Login"),
+                    TabContainer(size, context,"Sign Up"),
                   ],
                 ),
               ),
@@ -173,6 +129,54 @@ class _LoginContentsState extends State<LoginContents> {
         ),
       ],
     );
+  }
+
+  Container TabContainer(Size size, BuildContext context, String action) {
+    return Container(
+                    child: Column(
+                      children: [
+                        SizedBox(height: size.height * 0.03),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
+                          child: SizedBox(
+                            height: size.height * 0.06,
+                            child:
+                                Form("Enter Email or username", email, false),
+                          ),
+                        ),
+                        SizedBox(
+                            height:
+                                MediaQuery.of(context).size.height * 0.02),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
+                          child: SizedBox(
+                            height: size.height * 0.06,
+                            child: Form("Enter Password", password, true),
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 15),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Text("Forgot password ?",
+                                  style: GoogleFonts.redressed(
+                                      fontSize: 15,
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.w400)),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                            height:
+                                MediaQuery.of(context).size.height * 0.03),
+                        ActionButton(size, context, action),
+                        OrDivider(),
+                        SocialIcons()
+                      ],
+                    ),
+                  );
   }
 
   Row SocialIcons() {
