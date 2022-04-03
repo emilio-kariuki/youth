@@ -87,6 +87,7 @@ class _LoginContentsState extends State<LoginContents> {
                 elevation: 0,
                 backgroundColor: Colors.transparent,
                 bottom: TabBar(
+                  indicatorWeight: 5,
                   indicatorPadding: const EdgeInsets.all(5),
                   labelPadding : const EdgeInsets.all(2),
                   indicator: BoxDecoration(
