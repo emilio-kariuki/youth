@@ -139,9 +139,20 @@ class _LoginContentsState extends State<LoginContents> {
                               child: Form("Enter Password", password, true),
                             ),
                           ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 15),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text("Forgot password ?", style: GoogleFonts.redressed(fontSize:15, color: Colors.grey,fontWeight: FontWeight.w400)),
+                              ],
+                            ),
+                          ),
                           SizedBox(
                               height:
                                   MediaQuery.of(context).size.height * 0.05),
+                          
                           SizedBox(
                             height: size.height * 0.06,
                             width: size.width * 0.7,
