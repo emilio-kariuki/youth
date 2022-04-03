@@ -34,7 +34,7 @@ class _LoginState extends State<Login> {
           child: Align(
             alignment: Alignment.center,
             child: Padding(
-              padding: const EdgeInsets.all(3.0),
+              padding: const EdgeInsets.all(2.0),
               child: Container(
                 height: size.height * 0.6,
                 width: size.width * 0.8,
