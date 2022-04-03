@@ -122,42 +122,11 @@ class _LoginContentsState extends State<LoginContents> {
                             padding: const EdgeInsets.fromLTRB(10, 1, 10, 0),
                             child: SizedBox(
                               height: size.height * 0.06,
-                              child: TextFormField(
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                    
-                                    filled: true,
-                                    hintStyle:
-                                        TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 15, fontWeight: FontWeight.w400),
-                                    
-                                    hintText: "Enter email or username",
-                                    // prefixIcon: Icon(Icons.mail,
-                                        // color: Colors.blueGrey[900]),
-                                    fillColor: Colors.grey[200]),
-                                controller: email,
-                              ),
+                              child: Form("Enter Email or username", email),
                             ),
                           ),
                           SizedBox(height: 5),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 1, 10, 0),
-                            child: SizedBox(
-                              height: size.height * 0.06,
-                              child: TextFormField(
-                                obscureText: true,
-                                decoration: InputDecoration(
-                                    
-                                    filled: true,
-                                    hintStyle:
-                                        TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 15, fontWeight: FontWeight.w400),
-                                    
-                                    hintText: "password",
-                                    
-                                    fillColor: Colors.grey[200]),
-                                controller: password,
-                              ),
-                            ),
-                          ),
+                          Form("Enter password", password),
                           SizedBox(height: 10),
                           SizedBox(
                             height: size.height * 0.06,
@@ -201,6 +170,22 @@ class _LoginContentsState extends State<LoginContents> {
         ),
       ],
     );
+  }
+
+  TextFormField Form(String name, TextEditingController action) {
+    return TextFormField(
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                  
+                                  filled: true,
+                                  hintStyle:
+                                      TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 15, fontWeight: FontWeight.w400),
+                                  
+                                  hintText: name,
+                                
+                                  fillColor: Colors.grey[200]),
+                              controller: action,
+                            );
   }
 
   FlatButton button(String name) {
