@@ -125,7 +125,7 @@ class _LoginContentsState extends State<LoginContents> {
                               child: Form("Enter Email or username", email,false),
                             ),
                           ),
-                          SizedBox(height: 5),
+                          SizedBox(height: MediaQuery.of(context).size.height * 0.035),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(10, 1, 10, 0),
                             child: SizedBox(
@@ -133,7 +133,7 @@ class _LoginContentsState extends State<LoginContents> {
                               child: Form("Enter Password", password,true),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                           SizedBox(
                             height: size.height * 0.06,
                             width: size.width * 0.7,
