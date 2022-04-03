@@ -67,10 +67,21 @@ class LoginContents extends StatefulWidget {
   State<LoginContents> createState() => _LoginContentsState();
 }
 
-class _LoginContentsState extends State<LoginContents> {
+class _LoginContentsState extends State<LoginContents> with TickerProviderStateMixin {
   TabController? _tabController;
   final email = TextEditingController();
   final password = TextEditingController();
+  @override
+     void initState() {
+       super.initState();
+      _tabController = TabController(vsync: this, length: 2);
+      _tabController?.addListener(_handleTabSelection);
+     }
+
+     void _handleTabSelection() {
+        setState(() {
+         });
+     }
 
   @override
   Widget build(BuildContext context) {
