@@ -88,7 +88,7 @@ class _LoginContentsState extends State<LoginContents> {
                 backgroundColor: Colors.transparent,
                 bottom: TabBar(
                   indicator: BoxDecoration(
-                      color: const Color.fromARGB(255, 230, 185, 40),
+                      color: const Color.fromARGB(255, 206, 99, 0),
                       borderRadius: BorderRadius.circular(15.0)),
 
                   // ignore: prefer_const_literals_to_create_immutables
@@ -97,14 +97,14 @@ class _LoginContentsState extends State<LoginContents> {
                         child: Text("Log In",
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
-                                color: const Color.fromARGB(255, 206, 99, 0),
+                                color: Color.fromARGB(255, 255, 255, 255),
                                 fontWeight: FontWeight.w500))),
                     Tab(
                         child: Text("Sign Up",
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
                                 // ignore: prefer_const_constructors
-                                color: Color.fromARGB(255, 206, 99, 0),
+                                color: Color.fromARGB(255, 255, 255, 255),
                                 fontWeight: FontWeight.w500))),
                   ],
                 ),
