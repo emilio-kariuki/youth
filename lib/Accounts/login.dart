@@ -117,8 +117,10 @@ class _LoginContentsState extends State<LoginContents> {
                     Container(
                       child: Column(
                         children: [
+                          SizedBox(height: size.height * 0.02),
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(30, 1, 30, 0),
+                            
+                            padding: const EdgeInsets.fromLTRB(10, 1, 10, 0),
                             child: TextFormField(
                               obscureText: false,
                               decoration: InputDecoration(
