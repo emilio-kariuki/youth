@@ -72,10 +72,10 @@ class _LoginContentsState extends State<LoginContents>
   TabController? _tabController;
   final email = TextEditingController();
   final password = TextEditingController();
-  
+  int index = 0;
+
   @override
   Widget build(BuildContext context) {
-    
     final size = MediaQuery.of(context).size;
     return Column(
       children: [
@@ -84,6 +84,7 @@ class _LoginContentsState extends State<LoginContents>
           height: size.height * 0.57,
           width: size.width * 0.8,
           child: DefaultTabController(
+            initialIndex: index,
             length: 2,
             child: Scaffold(
               backgroundColor: Colors.transparent,
@@ -121,7 +122,7 @@ class _LoginContentsState extends State<LoginContents>
                         child: Text("Log In",
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
-                                color: _tabController?.index == 0
+                                color: index == 0
                                     ? Color.fromARGB(255, 255, 255, 255)
                                     : Color.fromARGB(255, 206, 99, 0),
                                 fontWeight: FontWeight.w500))),
@@ -130,7 +131,7 @@ class _LoginContentsState extends State<LoginContents>
                             style: GoogleFonts.roboto(
                                 fontSize: 18,
                                 // ignore: prefer_const_constructors
-                                color: _tabController?.index == 1
+                                color: index == 1
                                     ? Color.fromARGB(255, 255, 255, 255)
                                     : Color.fromARGB(255, 206, 99, 0),
                                 fontWeight: FontWeight.w500))),
