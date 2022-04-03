@@ -122,31 +122,36 @@ class _LoginContentsState extends State<LoginContents> {
                             padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
                             child: SizedBox(
                               height: size.height * 0.06,
-                              child: Form("Enter Email or username", email,false),
+                              child:
+                                  Form("Enter Email or username", email, false),
                             ),
                           ),
-                          SizedBox(height: MediaQuery.of(context).size.height * 0.035),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.035),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(15, 1, 15, 0),
                             child: SizedBox(
                               height: size.height * 0.06,
-                              child: Form("Enter Password", password,true),
+                              child: Form("Enter Password", password, true),
                             ),
                           ),
-                          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.05),
                           SizedBox(
                             height: size.height * 0.06,
                             width: size.width * 0.7,
                             child: ElevatedButton(
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
-                                    Color.fromARGB(255, 4, 49, 5)),
+                                    Color.fromARGB(255, 206, 99, 0)),
                                 shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30.0),
                                     side: BorderSide(
-                                      color: Color.fromARGB(255, 4, 49, 5),
+                                      color: Color.fromARGB(255, 206, 99, 0),
                                       width: 2.0,
                                     ),
                                   ),
@@ -177,14 +182,14 @@ class _LoginContentsState extends State<LoginContents> {
     );
   }
 
-  TextFormField Form(String name, TextEditingController action, bool isObscured) {
+  TextFormField Form(
+      String name, TextEditingController action, bool isObscured) {
     return TextFormField(
       validator: (String? value) {
-    return (value != null ) ? 'Enter a value!!' : null;
-  },
+        return (value != null) ? 'Enter a value!!' : null;
+      },
       obscureText: isObscured,
       decoration: InputDecoration(
-        
           filled: true,
           hintStyle: TextStyle(
               color: Color.fromARGB(255, 180, 180, 180),
