@@ -125,17 +125,20 @@ class _LoginContentsState extends State<LoginContents> {
                               child: TextFormField(
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(30.0),
-                                    ),
+                                    // border: OutlineInputBorder(
+                                    //   borderSide: BorderSide(
+                                    //     color: Colors.white,
+                                    //   ),
+                                    //   borderRadius: BorderRadius.circular(30.0),
+                                    // ),
                                     // icon: Icon(Icons.mail,size:30,color: Colors.black),
                                     filled: true,
                                     hintStyle:
                                         TextStyle(color: Colors.grey[800]),
                                     hoverColor: Colors.red,
                                     hintText: "Email",
-                                    prefixIcon: Icon(Icons.mail,
-                                        color: Colors.blueGrey[900]),
+                                    // prefixIcon: Icon(Icons.mail,
+                                        // color: Colors.blueGrey[900]),
                                     fillColor: Colors.grey[200]),
                                 controller: email,
                               ),
@@ -149,17 +152,17 @@ class _LoginContentsState extends State<LoginContents> {
                               child: TextFormField(
                                 obscureText: true,
                                 decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(30.0),
-                                    ),
+                                    // border: OutlineInputBorder(
+                                    //   borderRadius: BorderRadius.circular(30.0),
+                                    // ),
                                     // icon: Icon(Icons.mail,size:30,color: Colors.black),
                                     filled: true,
                                     hintStyle:
-                                        TextStyle(color: Colors.grey[800]),
+                                        TextStyle(color: Color.fromARGB(255, 180, 180, 180),fontSize: 20, fontWeight: FontWeight.w400),
                                     hoverColor: Colors.red,
                                     hintText: "password",
-                                    prefixIcon: Icon(Icons.lock,
-                                        color: Colors.blueGrey[900]),
+                                    // prefixIcon: Icon(Icons.lock,
+                                    //     color: Colors.blueGrey[900]),
                                     fillColor: Colors.grey[200]),
                                 controller: password,
                               ),
