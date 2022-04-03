@@ -199,8 +199,8 @@ class _LoginContentsState extends State<LoginContents> {
         child: Container(
             margin: const EdgeInsets.only(left: 10.0, right: 30.0),
             child: Divider(
-              color: Color.fromARGB(255, 133, 133, 133),
-              height: 90,
+              color: Color.fromARGB(255, 11, 27, 6),
+              height: 80,
             )),
       ),
       Text("OR"),
@@ -208,7 +208,7 @@ class _LoginContentsState extends State<LoginContents> {
         child: Container(
             margin: const EdgeInsets.only(left: 30.0, right: 10.0),
             child: Divider(
-              color: Color.fromARGB(255, 133, 133, 133),
+              color: Color.fromARGB(255, 11, 27, 6),
               height: 50,
             )),
       ),
