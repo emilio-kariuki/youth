@@ -1,9 +1,11 @@
 // ignore_for_file: deprecated_member_use
 
 import "package:flutter/material.dart";
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../Builder/social.dart';
+import '../screens/home.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -84,105 +86,103 @@ class _LoginContentsState extends State<LoginContents>
           height: size.height * 0.57,
           width: size.width * 0.8,
           child: DefaultTabController(
-            
             length: 2,
-            child: Builder(
-              builder: (BuildContext context) {
-                return GestureDetector(
-                  onTap: (){
-                    setState(() {
-                      
-                    });
-                  },
-                  child: Scaffold(
-                              backgroundColor: Colors.transparent,
-                              appBar: AppBar(
-                  title: Center(
-                      child: Text(
-                    "Welcome",
-                    style: GoogleFonts.roboto(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: Color.fromARGB(255, 206, 99, 0),
-                    ),
-                  )),
-                  flexibleSpace: Container(
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(20),
-                            topRight: Radius.circular(20)),
-                        color: Color.fromARGB(255, 255, 255, 255)),
-                  ),
-                  elevation: 0,
+            child: Builder(builder: (BuildContext context) {
+              return GestureDetector(
+                onTap: () {
+                  setState(() {});
+                },
+                child: Scaffold(
                   backgroundColor: Colors.transparent,
-                  bottom: TabBar(
-                    controller: _tabController,
-                    indicatorWeight: 5,
-                    indicatorPadding: const EdgeInsets.all(5),
-                    labelPadding: const EdgeInsets.all(2),
-                    indicator: BoxDecoration(
-                        color: const Color.fromARGB(255, 206, 99, 0),
-                        borderRadius: BorderRadius.circular(20.0)),
-                
-                    // ignore: prefer_const_literals_to_create_immutables
-                    tabs: [
-                      Tab(
-                          child: Text("Log In",
-                              style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: DefaultTabController.of(context)?.index == 0
-                                      ? Color.fromARGB(255, 255, 255, 255)
-                                      : Color.fromARGB(255, 206, 99, 0),
-                                  fontWeight: FontWeight.w500))),
-                      Tab(
-                          child: Text("Sign Up",
-                              style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  // ignore: prefer_const_constructors
-                                  color: DefaultTabController.of(context)?.index == 1
-                                      ? Color.fromARGB(255, 255, 255, 255)
-                                      : Color.fromARGB(255, 206, 99, 0),
-                                  fontWeight: FontWeight.w500))),
-                    ],
-                  ),
-                              ),
-                              body: ClipRRect(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20)),
-                  child: Container(
-                    height: size.height * 0.5,
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    child: TabBarView(
-                      children: [
-                        GestureDetector(
-                          onTap: (){
-                            setState(() {
-                          
-                            });
-                          },
-                          child: TabContainer(size, context, "Login")),
-                        GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              
-                            });
-                          },
-                          child: TabContainer(size, context, "Sign Up")),
+                  appBar: AppBar(
+                    title: Center(
+                        child: Text(
+                      "Welcome",
+                      style: GoogleFonts.roboto(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromARGB(255, 206, 99, 0),
+                      ),
+                    )),
+                    flexibleSpace: Container(
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(20),
+                              topRight: Radius.circular(20)),
+                          color: Color.fromARGB(255, 255, 255, 255)),
+                    ),
+                    elevation: 0,
+                    backgroundColor: Colors.transparent,
+                    bottom: TabBar(
+                      controller: _tabController,
+                      indicatorWeight: 5,
+                      indicatorPadding: const EdgeInsets.all(5),
+                      labelPadding: const EdgeInsets.all(2),
+                      indicator: BoxDecoration(
+                          color: const Color.fromARGB(255, 206, 99, 0),
+                          borderRadius: BorderRadius.circular(20.0)),
+
+                      // ignore: prefer_const_literals_to_create_immutables
+                      tabs: [
+                        Tab(
+                            child: Text("Log In",
+                                style: GoogleFonts.roboto(
+                                    fontSize: 18,
+                                    color: DefaultTabController.of(context)
+                                                ?.index ==
+                                            0
+                                        ? Color.fromARGB(255, 255, 255, 255)
+                                        : Color.fromARGB(255, 206, 99, 0),
+                                    fontWeight: FontWeight.w500))),
+                        Tab(
+                            child: Text("Sign Up",
+                                style: GoogleFonts.roboto(
+                                    fontSize: 18,
+                                    // ignore: prefer_const_constructors
+                                    color: DefaultTabController.of(context)
+                                                ?.index ==
+                                            1
+                                        ? Color.fromARGB(255, 255, 255, 255)
+                                        : Color.fromARGB(255, 206, 99, 0),
+                                    fontWeight: FontWeight.w500))),
                       ],
                     ),
                   ),
+                  body: ClipRRect(
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20)),
+                    child: Container(
+                      height: size.height * 0.5,
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      child: TabBarView(
+                        children: [
+                          GestureDetector(
+                              onTap: () {
+                                setState(() {});
+                              },
+                              child: TabContainer(size, context, "Login")),
+                          GestureDetector(
+                              onTap: () {
+                                setState(() {});
+                              },
+                              child: TabContainer(size, context, "Sign Up"),
                               ),
-                            ),
-                );
-              }),
-            ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              );
+            }),
           ),
+        ),
       ],
     );
   }
 
-  Container TabContainer(Size size, BuildContext context, String action) {
+  Container TabContainer(
+      Size size, BuildContext context, String action) {
     return Container(
       child: Column(
         children: [
@@ -265,7 +265,8 @@ class _LoginContentsState extends State<LoginContents>
     ]);
   }
 
-  SizedBox ActionButton(Size size, BuildContext context, String action) {
+  SizedBox ActionButton(
+      Size size, BuildContext context, String action) {
     return SizedBox(
       height: size.height * 0.06,
       width: size.width * 0.7,
@@ -284,12 +285,7 @@ class _LoginContentsState extends State<LoginContents>
           ),
         ),
         child: Text(action, style: GoogleFonts.roboto(fontSize: 20)),
-        onPressed: () {
-          setState(() {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => Login()));
-          });
-        },
+        onPressed: () => Get.to(Home()),
       ),
     );
   }
