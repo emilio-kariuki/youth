@@ -15,17 +15,33 @@ class _HomeState extends State<Home> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
 
-    body: Stack(
-      children: [
-        Container(
-          height: size.height * 0.05,
-          width: size.width * 0.2,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
+    body: SafeArea(
+      child: Stack(
+        children: [
+         
+          Column(
+            children: [
+               SizedBox(height: size.height * 0.05),
+              Padding(
+                padding: const EdgeInsets.only(left : 10),
+                child: Container(
+                  height: size.height * 0.09,
+                  width: size.width * 0.2,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: SvgPicture.asset('assets/images/profile.svg',height: size.height * 0.09,width: size.width * 0.2,),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text("""Praise the
+                              Lord """, style: GoogleFonts.roboto(fontSize: 28, color: Colors.black,fontWeight: FontWeight.w400)),
+              )
+            ],
           ),
-          child: SvgPicture.asset('assets/images/profile.svg'),
-        ),
-      ],    ),
+        ],    ),
+    ),
       
       );
   }
