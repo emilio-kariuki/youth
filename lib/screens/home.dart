@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
@@ -13,6 +14,18 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+
+    body: Stack(
+      children: [
+        Container(
+          height: size.height * 0.05,
+          width: size.width * 0.2,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+          ),
+          child: SvgPicture.asset('assets/images/profile.svg'),
+        ),
+      ],    ),
       
       );
   }
